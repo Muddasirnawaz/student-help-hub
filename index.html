@@ -40,20 +40,39 @@
     </div>
   </section>
 
+<section id="dynamicContent" class="card">
+  <h3>Click a button above to view details</h3>
+</section>
+
   <footer>
     <p>© 2025 Student Help Hub | Created by You</p>
   </footer>
 
 <script>
   function openSection(type) {
+    const content = document.getElementById('dynamicContent');
     if (type === 'notes') {
-      alert('Notes section: You can upload PDFs, links, or Google Drive resources here.');
+      content.innerHTML = `
+        <h3>📚 Notes & Resources</h3>
+        <ul>
+          <li>Mathematics Notes (PDF)</li>
+          <li>Science Notes (PDF)</li>
+          <li>Previous Question Papers</li>
+        </ul>`;
     }
     if (type === 'skills') {
-      alert('Skill Learning section: Add links for coding, robotics, and technology courses.');
+      content.innerHTML = `
+        <h3>🧠 Skill Learning</h3>
+        <ul>
+          <li>HTML & CSS Basics</li>
+          <li>Python Programming</li>
+          <li>Robotics Introduction</li>
+        </ul>`;
     }
     if (type === 'doubt') {
-      alert('Doubt Support section: Connect students with mentors or a Google Form.');
+      content.innerHTML = `
+        <h3>❓ Doubt Support</h3>
+        <p>Students can submit doubts using a Google Form or email mentors.</p>`;
     }
   }
 </script>
