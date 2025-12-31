@@ -24,24 +24,38 @@
     <div class="card">
       <h2>📚 Notes & Resources</h2>
       <p>Access subject-wise notes and study materials.</p>
-      <button onclick="alert('Feature coming soon')">View Notes</button>
+      <button onclick="openSection('notes')">View Notes</button>
     </div>
 
     <div class="card">
       <h2>🧠 Skill Learning</h2>
       <p>Learn coding, robotics, and basic technology skills.</p>
-      <button onclick="alert('Feature coming soon')">Start Learning</button>
+      <button onclick="openSection('skills')">Start Learning</button>
     </div>
 
     <div class="card">
       <h2>❓ Doubt Support</h2>
       <p>Ask questions and get help from mentors.</p>
-      <button onclick="alert('Feature coming soon')">Ask a Doubt</button>
+      <button onclick="openSection('doubt')">Ask a Doubt</button>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Student Help Hub | Created by You</p>
   </footer>
+
+<script>
+  function openSection(type) {
+    if (type === 'notes') {
+      alert('Notes section: You can upload PDFs, links, or Google Drive resources here.');
+    }
+    if (type === 'skills') {
+      alert('Skill Learning section: Add links for coding, robotics, and technology courses.');
+    }
+    if (type === 'doubt') {
+      alert('Doubt Support section: Connect students with mentors or a Google Form.');
+    }
+  }
+</script>
 </body>
 </html>
